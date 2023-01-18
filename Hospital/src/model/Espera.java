@@ -2,28 +2,16 @@ package model;
 
 import java.util.Date;
 
-public class Espera {
+public abstract class Espera {
 
-	private long tempo = System.currentTimeMillis();
-	private Date dataEHora = new Date(tempo );
+	private Date dataEHora;
 	private String motivoEspera;
 	
 	
-	public Espera(long tempo, Date dataEHora, String motivoEspera) {
+	public Espera(Date dataEHora, String motivoEspera) {
 		super();
-		this.tempo = tempo;
 		this.dataEHora = dataEHora;
 		this.motivoEspera = motivoEspera;
-	}
-
-
-	public long getTempo() {
-		return tempo;
-	}
-
-
-	public void setTempo(long tempo) {
-		this.tempo = tempo;
 	}
 
 
@@ -45,7 +33,9 @@ public class Espera {
 	public void setMotivoEspera(String motivoEspera) {
 		this.motivoEspera = motivoEspera;
 	}
-	
+	public void reservarSala() {
+		
+	}
 	
 }
 

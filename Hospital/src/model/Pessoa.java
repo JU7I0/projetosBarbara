@@ -3,14 +3,12 @@ package model;
 public abstract class Pessoa {
 
 	private String nome;
-	private Integer idade;
+	private Paciente paciente;
+	private Funcionario funcionario;
 	
-	public Pessoa() {
-		
-	}
-	public Pessoa(String nome, Integer idade) {
+	public Pessoa(String nome) {
 		this.nome = nome;
-		this.idade = idade;
+		
 	}
 	
 	public String getNome() {
@@ -19,11 +17,21 @@ public abstract class Pessoa {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public Integer getIdade() {
-		return idade;
+
+	public Paciente getPaciente() {
+		return paciente;
 	}
-	public void setIdade(Integer idade) {
-		this.idade = idade;
+
+	public void setPaciente(Paciente paciente) {
+		this.paciente = paciente;
+	}
+
+	public Funcionario getFuncionario() {
+		return funcionario;
+	}
+
+	public void setFuncionario(Funcionario funcionario) {
+		this.funcionario = funcionario;
 	}
 	
 

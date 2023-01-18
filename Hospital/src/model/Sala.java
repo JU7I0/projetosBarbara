@@ -2,20 +2,27 @@ package model;
 
 public class Sala {
 
-	private Integer numSala;
+	private int numSala;
 	private String tipoSala;
 	
-	public Sala(Integer numSala, String tipoSala) {
+	public Sala(int numSala, String tipoSala) {
 		super();
 		this.numSala = numSala;
 		this.tipoSala = tipoSala;
 	}
 
-	public Integer getNumSala() {
+	
+	@Override
+	public String toString() {
+		return numSala +", do tipo: " + tipoSala;
+	}
+
+
+	public int getNumSala() {
 		return numSala;
 	}
 
-	public void setNumSala(Integer numSala) {
+	public void setNumSala(int numSala) {
 		this.numSala = numSala;
 	}
 
@@ -28,6 +35,7 @@ public class Sala {
 	}
 	
 	public void reservar(int dia, int mes, int ano) {
+		
 		
 	}
 }

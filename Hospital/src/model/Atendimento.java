@@ -1,54 +1,36 @@
 package model;
 
-import java.util.Date;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
-public abstract class Atendimento {
-	
-	private long tempo = System.currentTimeMillis();
-	private Date dataEHora = new Date(tempo );
-	private String nomeMedico;
+public class Atendimento {
 	
 	
-	public Atendimento(long tempo, Date dataEHora, String nomeMedico) {
+	private LocalDateTime dataEHora;
+	
+	
+	public Atendimento(LocalDateTime dataEHora) {
 		super();
-		this.tempo = tempo;
 		this.dataEHora = dataEHora;
-		this.nomeMedico = nomeMedico;
+		
+	}
+
+	@Override
+	public String toString() {
+		return " data e hora:" + dataEHora;
 	}
 
 
-	public long getTempo() {
-		return tempo;
-	}
-
-
-	public void setTempo(long tempo) {
-		this.tempo = tempo;
-	}
-
-
-	public Date getDataEHora() {
+	public LocalDateTime getDataEHora() {
 		return dataEHora;
 	}
 
-
-	public void setDataEHora(Date dataEHora) {
+	public void setDataEHora(LocalDateTime dataEHora) {
 		this.dataEHora = dataEHora;
 	}
 
-
-	public String getNomeMedico() {
-		return nomeMedico;
-	}
-
-
-	public void setNomeMedico(String nomeMedico) {
-		this.nomeMedico = nomeMedico;
+	public void agendarAtendimento() {
 	}
 	
-	public abstract void agendarAtendimento();
-	
-	
 
-	
 }

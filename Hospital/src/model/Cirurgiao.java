@@ -3,16 +3,16 @@ package model;
 public class Cirurgiao extends Medico{
 	
 	private String atuacao;
-	private Integer numCirurgia;
+	private int numCirurgia;
 	
-	
-	public Cirurgiao(Integer matricula, String cargo, String especialidade, Integer numCRM, String atuacao,
-			Integer numCirurgia) {
-		super(matricula, cargo, especialidade, numCRM);
+	public Cirurgiao(String nome, int matricula, String cargo, String especialidade, int numCRM, String atuacao,
+			int numCirurgia) {
+		super(nome, matricula, cargo, especialidade, numCRM);
 		this.atuacao = atuacao;
 		this.numCirurgia = numCirurgia;
 	}
 
+	
 	public String getAtuacao() {
 		return atuacao;
 	}
@@ -21,15 +21,15 @@ public class Cirurgiao extends Medico{
 		this.atuacao = atuacao;
 	}
 
-	public Integer getNumCirurgia() {
+	public int getNumCirurgia() {
 		return numCirurgia;
 	}
 
-	public void setNumCirurgia(Integer numCirurgia) {
+	public void setNumCirurgia(int numCirurgia) {
 		this.numCirurgia = numCirurgia;
 	}
-	
-	
 
+	final public void realizarCirurgia() {
+	}
 	
 }
