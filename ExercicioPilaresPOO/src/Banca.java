@@ -1,6 +1,6 @@
 import java.util.List;
 
-public class Banca {
+public final class Banca {
     private List<Produto> listaDeProdutos;
 
     public Banca() {
